@@ -38,7 +38,7 @@ sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-p
 MacOS: Install MacTeX from https://tug.org/mactex/.
 Windows: Install MiKTeX and Pandoc from their respective websites.
 
-Usage
+## Usage
 Step 1: Run the Script Locally
 1. Place your Jupyter Notebook in the specified notebook_path.
 2. Run the script with the following command:
@@ -73,13 +73,13 @@ result = convert_notebook_to_pdf('example_notebook.ipynb', notebook_path='/conte
 print(result)
 ```
 
-Troubleshooting
+## Troubleshooting
 Pandoc Missing Error: Ensure pandoc is installed and accessible in your system's PATH.
 LaTeX Errors: Verify that all required LaTeX packages are installed.
 File Not Found: Double-check the file_name and notebook_path values.
 License
 This project is licensed under the MIT License. Refer to the LICENSE file for more information.
 
-Contributing
+## Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or suggestions.
 
