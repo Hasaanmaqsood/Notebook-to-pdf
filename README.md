@@ -39,46 +39,49 @@ MacOS: Install MacTeX from https://tug.org/mactex/.
 Windows: Install MiKTeX and Pandoc from their respective websites.
 
 ## Usage
-Step 1: Run the Script Locally
-1. Place your Jupyter Notebook in the specified notebook_path.
-2. Run the script with the following command:
+### Direct Usage in Any Environment
+Download the script from GitHub and directly use it in your Python script or Colab notebook:
 ```bash
-python jupyter_pdf_converter.py
+!wget -nc https://raw.githubusercontent.com/Hasaanmaqsood/Notebook-to-pdf/main/jupyter_pdf_converter.py
 ```
-Step 2: Customize Parameters
-To specify custom input and output paths, update the parameters in the script:
+Example Usage
+
 ```bash
 from jupyter_pdf_converter import convert_notebook_to_pdf
 
+# Specify notebook and output paths
 notebook_path = "/path/to/notebooks"
 output_dir = "/path/to/output"
 file_name = "example_notebook.ipynb"
 
+# Convert the notebook to PDF
 result = convert_notebook_to_pdf(file_name, notebook_path=notebook_path, output_dir=output_dir)
 print(result)
+
 ```
 
-Step 3: Use in Google Colab (Optional)
-If using Google Colab, install the required dependencies:
+### Using in Google Colab
+1. Install Dependencies Run the following commands in your Colab notebook to install required dependencies:
 ```bash
 !apt-get update
 !apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic
 ```
-
-Then, use the following code:
+2. Download and Use the Script Use the following code to convert your notebook to PDF:
 ```bash
+!wget -nc https://raw.githubusercontent.com/Hasaanmaqsood/Notebook-to-pdf/main/jupyter_pdf_converter.py
 from jupyter_pdf_converter import convert_notebook_to_pdf
 
+# Convert the notebook
 result = convert_notebook_to_pdf('example_notebook.ipynb', notebook_path='/content', output_dir='/content/pdfs')
 print(result)
+
 ```
 
 ## Troubleshooting
-Pandoc Missing Error: Ensure pandoc is installed and accessible in your system's PATH.
-LaTeX Errors: Verify that all required LaTeX packages are installed.
-File Not Found: Double-check the file_name and notebook_path values.
-License
-This project is licensed under the MIT License. Refer to the LICENSE file for more information.
+Common Issues and Fixes
+1. Pandoc Missing Error: Ensure pandoc is installed and accessible in your system's PATH.
+2. LaTeX Errors: Verify that all required LaTeX packages (texlive-xetex, etc.) are installed.
+3. File Not Found: Double-check the file_name and notebook_path values to ensure they are correct.
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or suggestions.
